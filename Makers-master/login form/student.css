@@ -1,0 +1,96 @@
+
+
+.brand img {
+    height : 15%;
+    width : 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+} 
+
+.navbar-inverse{
+
+	background-color: #555;
+
+}
+
+
+
+.button1 {
+  			width: 80%;
+  			height: 250px;
+  			background-size: cover;
+  			background-position: center;
+  			background-color: #3375ff;
+  			font-size: 25px;
+  			border-radius: 55px;
+  			border: 5px solid #ddd;
+  			color: white;
+  			
+  			margin: 150px 50px 60px 50px;
+
+			}
+
+
+.body1{
+
+	/*border: 5px solid white;*/
+	background: white;
+	margin: 100px 150px 60px 150px;
+	padding-bottom: 60px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+/*body{
+
+	background: lightgrey;
+}
+*/
+.footer{
+
+	position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 10%;
+   background-color: #555;
+   
+}
+
+.about{
+	color: white;
+}
+
+.ft-text-title{
+	color: white;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #222;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}

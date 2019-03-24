@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <script language="javascript" type="text/javascript">
+        window.history.forward();
+        
+    </script> -->
+
+
+
+      <script language="javascript" type="text/javascript">
+
+        window.history.forward();
+
+        //window.history.forward();
+        //window.location.replace("http://192.168.64.2/my_files/Makerspace/home/homepage2.html");
+
+       if(performance.navigation.type == 2){
+   location.reload(true);
+}
+       
+   
+
+        
+    </script>  
+<title>MakerSpace Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<script >
+  $(window).scroll(function () { 
+    if ($(this).scrollTop() < 50) {
+      
+      $('header').slideDown();
+    } else {
+      $('header').slideUp();
+    }
+  });
+
+</script>
+</head>
+
+
+
+<body>
+
+<!-- Links (sit on top) -->
+
+
+<div class="w3-top">
+
+<div class="navbar">
+<header>
+  <img src="https://www.uta.edu/_templates/_images/responsive/uta-logo-main.png" alt="home">
+</header>
+
+<ul>
+  <li><a href="http://192.168.64.2/my_files/Makerspace/home/homepage.html">Home</a></li>
+  <li><a href="http://192.168.64.2/my_files/Makerspace/student/newStudent.php">Students</a></li>
+  <li><a href="http://192.168.64.2/my_files/Makerspace/machines/machines.php">Machines</a></li>
+  <li><a href="http://192.168.64.2/my_files/Makerspace/history/History.php">History</a><li>
+   <li><a href="http://192.168.64.2/my_files/Makerspace/admin/admin.php">Admin</a><li>
+</ul>
+</div>
+</div>
+
+
+
+
+<!-- Content -->
+<div class="content" style="max-width:2200px; margin-bottom:80px">
+
+
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="containerDisplay mySlides pics">
+      <img src="1.jpeg" style="width:100%">
+      </div>
+    
+
+    <div class="containerDisplay mySlides pics">
+      <img src="2.jpeg" style="width:100%">
+    </div>
+
+    <div class="containerDisplay mySlides pics">
+      <img src="3.jpeg" style="width:100%">
+      </div>
+    </div>
+
+  <ul></ul>
+
+
+  <!-- Tools available scroll -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Tools Available</span>
+    </div>
+
+<section class="card" >
+  <div class="hovershadow">
+   <div class="card--content">
+        <img src="images/3D.jpg" alt="3D Printer" style="width:100%">
+        <div class="container">
+          <h3>3D Printer</h3>
+          <p class="w3-opacity">FabLab</p>
+          <p>Fast, high-quality 3D printer able to produce objects down to 50 micron (0.05mm) resolution.</p>
+    </div>
+  </div>
+</div>
+
+<div class="hovershadow">
+ <div class="card--content">
+
+        <img src="images/Arduino.jpg" alt="Electronics" style="width:100%">
+        <div class="container">
+          <h3>Electronics</h3>
+          <p class="w3-opacity">NH 241</p>
+          <p>Electronics such as Arduino Mega 2560, Arduino Uno R3, Function Generator, etc, are availbe to be in use.</p>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="hovershadow">
+ <div class="card--content">
+
+
+        <img src="images/Bench.png" alt="Shop Room" style="width:100%">
+        <div class="container">
+          <h3>Shop Room</h3>
+          <p class="w3-opacity">ERB</p>
+          <p>Sharpen tools, cut through woods, equipment such as chainsaws, drills, etc.</p>
+
+      </div>
+      </div>
+    </div>
+
+ <div class="hovershadow">
+   <div class="card--content">
+        <img src="images/Laser.jpg" alt="Laser Cutting" style="width:100%">
+        <div class="container">
+          <h3>Laser Cutting</h3>
+          <p class="w3-opacity">FabLab</p>
+          <p>Laser cutters and engravers for projects./p>
+    </div>
+  </div>
+</div>
+
+<div class="hovershadow">
+ <div class="card--content">
+
+        <img src="images/Oculus.jpg" alt="Auxiliary" style="width:100%">
+        <div class="container">
+          <h3>Auxiliary</h3>
+          <p class="w3-opacity">NH 241</p>
+          <p>Technology that supports student's creation and encourages them to be innovative. Technologies such as Oculus Rift, etc.</p>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="hovershadow">
+ <div class="card--content">
+
+
+        <img src="images/Scan.jpg" alt="3D Scanning" style="width:100%">
+        <div class="container">
+          <h3>3D Scanning</h3>
+          <p class="w3-opacity">FabLab</p>
+          <p>Three dimensional scanning to create models of real world objects.</p>
+
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- 
+	<The footer for tha page   --> 
+    	<!-- <div class="footer"> 
+        		<div class="col-sm-4 text-center">
+        			<br />
+           		 <p><a href="#" class="about">About Us</a></p>
+            
+            
+           		 </div>
+            	<div class="col-sm-4 text-center border-left">
+          
+              	<br />
+               	<a href="#" class="about">Staff Login</a>
+           		</div>
+           		<div class="col-sm-4 col-xs-12 text-center border-left">
+            		<h5 class="ft-text-title">Follow Us:</h5>
+            		<div class="pspt-dtls">
+                		<a href="#" class="about">FACEBOOK | </a>
+               			 <a href="#" class="about">TWITTER | </a>
+                		<a href="#" class="about">INSTAGRAM</a>
+               			 <br><br><br><br><br><br><br>
+            		</div>
+       			 </div>
+    	
+		</div>  -->
+
+
+
+
+<!-- <!-- Footer -->
+
+<footer class="container footer-padding w3-center">
+  <div class="w3-xlarge w3-section">
+    <h3>UTA MakerSpace </h3>
+    <a href="http://192.168.64.2/my_files/Makerspace/index.php">Sign Out</a>
+    <div class = "btn" >About</div>
+    <div class = "btn">Contact Us</div>
+
+</div>
+</footer> 
+
+
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 5 seconds
+}
+
+</script>
+
+<!-- <script>
+    $(document).ready(function() {
+      
+       
+     
+     //if submit button is clicked
+     
+    $('#selector').click(function (event) {       
+      event.preventDefault();
+
+      location.reload();
+
+
+    }); 
+ 
+ 
+ </script> -->
+
+</body>
+</html>

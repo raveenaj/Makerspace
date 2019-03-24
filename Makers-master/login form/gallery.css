@@ -1,0 +1,55 @@
+.image {
+  			width: 100%;
+  			height: 250px;
+  			background-size: cover;
+  			background-position: center;
+			}
+
+		.image1{
+			background-image: url(https://images.unsplash.com/photo-1538931055159-b24c466f1e9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc704d18ecde74d18e9791017a9382bc&auto=format&fit=crop&w=500&q=60);
+		}
+		.image2{
+			background-image: url(https://images.unsplash.com/photo-1538792251741-1a74d2bb601e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e0c6ac725e6cd81bcf357c7ff588620c&auto=format&fit=crop&w=500&q=60);
+		}
+		.image3{
+			background-image: url(https://images.unsplash.com/photo-1538918552877-c0ca48182db4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1934b93dcc627befb56a12816e02e556&auto=format&fit=crop&w=500&q=60);
+		}
+		.image4{
+			background-image: url(https://images.unsplash.com/photo-1538859281880-95fd9cbcf83b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1f1aa9d038cba9ab6f2967dad095c390&auto=format&fit=crop&w=500&q=60);
+		}
+		.image5{
+			background-image: url(https://images.unsplash.com/photo-1538837138777-2e85e1f9e92a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f57b1e052c3ca78b00abbda305fd73b7&auto=format&fit=crop&w=500&q=60);
+		}
+		.image6{
+			background-image: url(https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d4147a2e4e3f79299e2f0c92b13db9ee&auto=format&fit=crop&w=500&q=60);
+		}
+		.image7{
+			background-image: url(https://images.unsplash.com/photo-1538931055159-b24c466f1e9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc704d18ecde74d18e9791017a9382bc&auto=format&fit=crop&w=500&q=60);
+		}
+		.image8{
+			background-image: url(https://images.unsplash.com/photo-1538792251741-1a74d2bb601e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e0c6ac725e6cd81bcf357c7ff588620c&auto=format&fit=crop&w=500&q=60);
+		}
+		.image9{
+			background-image: url(https://images.unsplash.com/photo-1538918552877-c0ca48182db4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1934b93dcc627befb56a12816e02e556&auto=format&fit=crop&w=500&q=60);
+		}
+https://pbs.twimg.com/profile_images/639187318658592768/0WSKUbcX_400x400.png
+body{
+	padding:70px;
+}
+
+.jumbotron{
+	color: #2c3e50;
+	background: #ecf0f1;
+}
+
+.navbar-inverse {
+	background: #2c3e50;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color:white;
+}
+
+.navbar-inverse .navbar-brand {
+	color:white;
+}

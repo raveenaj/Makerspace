@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" "content="width=device-width, "initial-scale=1"> <!--make the website work on all devices and screen res -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> <!--take care of all styling needs and browser differences -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+  <style>
+
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #cbcbcb;
+    background-color: #e4e4e4;
+  }
+  li {
+    float:left;
+  }
+
+  li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+/* table */
+<style type="text/css">
+		body {
+			font-size: 15px;
+			color: #343d44;
+			font-family: "segoe-ui", "open-sans", tahoma, arial;
+			padding: 0;
+			margin: 0;
+		}
+		table {
+      margin-top: 20px;
+      margin-left:70px;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe Ui";
+			font-size: 12px;
+		}
+
+		h1 {
+			margin: 25px ;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 17px;
+		}
+
+		table td {
+			transition: all .5s;
+		}
+
+		/* Table */
+		.data-table {
+			border-collapse: collapse;
+			font-size: 14px;
+			min-width: 500px;
+		}
+
+		.data-table th,
+		.data-table td {
+			border: 1px solid #e1edff;
+			padding: 7px 17px;
+		}
+		.data-table caption {
+			margin: 7px;
+		}
+
+		/* Table Header */
+		.data-table thead th {
+			background-color: #32a1ff;
+			color: #FFFFFF;
+			border-color: #3a83c1 !important;
+			text-transform: uppercase;
+		}
+
+		/* Table Body */
+		.data-table tbody td {
+			color: #353535;
+		}
+		.data-table tbody td:first-child,
+		.data-table tbody td:nth-child(4),
+		.data-table tbody td:last-child {
+			text-align: center;
+		}
+
+		.data-table tbody tr:nth-child(odd) td {
+			background-color: #c6e6ff;
+		}
+		.data-table tbody tr:hover td {
+			background-color: #c6e6ff;
+			border-color: #c6e6ff;
+		}
+
+	</style>
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <!--- Navigation bar -->
+
+  <ul>
+    <li><a href="http://192.168.64.2/my_files/login%20form/Home/idk.html#">Home </a></li>
+    <li><a href=http://192.168.64.2/my_files/login%20form/machines/machines.php">Machines</a></li>
+    <li><a href="http://192.168.64.2/my_files/login%20form/history.html">History</a></li>
+    <li><a href="http://192.168.64.2/my_files/login%20form/studentNew/newStudent.php">Students</a></li>
+    <li style = "float:right"><a class="active" href="about">About</a></li>
+  </ul>
+
+
+<!--- table ----->
+<?php
+
+//connect to SQLiteDatabase
+
+
+$conn = mysqli_connect("localhost", "root", "Kimilkai88", "makerssquad");
+
+if(!$conn) {
+  echo "Error: Unable to connect to MySQL." . PHP_EOL;
+  echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+  echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+#echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+#echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
+
+
+$sql = "SELECT * FROM Tool";
+$result = $conn->query($sql);
+?>
+<table class = "data-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Lab</th>
+      <th>Expand</th>
+    </tr>
+  </thead>
+  <tbody>
+      <?php
+        $no=0;
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          $no++;
+            echo "<tr>
+            <td>".$row["Tool_ID"]."</td>
+            <td>".$row["Toolname"]."</td>
+            <td> ".$row["lab"]."</td>"
+            ?>
+
+            <td>
+              <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">+</button>
+
+</div>
+            </td>
+
+            <?php
+            "</tr>";
+        }?>
+
+
+  </tbody>
+</tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Student Record</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+
+          <?php
+          $sql2 = "SELECT h.Timestamp, v.User_ID, u.Firstname FROM User u
+                    LEFT JOIN History h ON u.User_ID=h.User_ID
+                    LEFT JOIN Verify v ON v.User_ID=u.User_ID";
+
+          $result2 = $conn->query($sql2) or die ($conn->error);
+           ?>
+           <table class = "data-table">
+             <thead>
+               <tr>
+                 <th>UserID</th>
+                 <th>Name</th>
+                 <th>Time Log</th>
+               </tr>
+             </thead>
+             <tbody>
+               <?php
+               while($row2 = $result2->fetch_assoc()){
+                 echo "<tr>
+                 <td>".$row2["User_ID"]."</td>
+                 <td>".$row2["Firstname"]."</td>
+                 <td>".$row2["Timestamp"]."</td></tr>";
+               }
+               ?>
+             </tbody>
+           </table>
+
+
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<?php
+mysqli_close($conn);
+?>
+
+
+</body>
+</html>
